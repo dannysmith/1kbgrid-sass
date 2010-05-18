@@ -60,8 +60,8 @@ You'll see it at http://localhost:4000.
 
 If you want to change the Haml or Sass you'll obviously have to re-render the HTML and CSS with something like:
 
-haml -f html5 example.haml served/index.html
-sass styles.sass served/styles.css
+    haml -f html5 example.haml served/index.html
+    sass styles.sass served/styles.css
 
 ## Author
 1KbGrid-sass was written by [Danny Smith](http://dasmith.co.uk).<br>
