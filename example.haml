@@ -1,0 +1,45 @@
+!!!
+%html
+  %head
+    %link{:href => "styles.css", :rel => 'stylesheet', :type => 'text/css'}
+    %script{ :src => "http://gridlayouts.com/_assets/_js/jquery.js"}
+    %script{ :src => "http://gridlayouts.com/_assets/_js/gridlayout.js"}
+  %body
+    #wrapper
+      .row
+        .column.grid_12
+          %p An Example of the 1kb Grid (12)
+
+      .row
+        .column.grid_4
+          %p 4
+        .column.grid_4
+          %p 4
+        .column.grid_4
+          %p 4
+          
+      .row
+        .column.grid_6
+          %p 6
+          .row
+            .column.grid_3
+              %p 3
+            .column.grid_3
+              %p 3
+        .column.grid_6
+          %p 6
+          %p 6
+
+    / || Allows Ctrl-Shift-G to show a Grid over the page.
+    / || Note that the details are not inherited from the stylesheet, you have to enter them manually.
+    / || See http://gridlayouts.com/ for More
+    #GridLayout
+      #GridLayout-params
+        {
+        column_width:60,
+        column_count:12,
+        subcolumn_count:1,
+        column_gutter:20,
+        align:'center'
+        }
+        

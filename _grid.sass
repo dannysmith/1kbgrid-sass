@@ -1,0 +1,35 @@
+//Grid system adapted from http://1kbgrid.com/ by Tyler Tate
+
+//Set up your column sizes
+$column_width: 60
+$column_count: 12
+$column_gutter: 20
+
+$total_width: $column_width * $column_count + $column_gutter * $column_count * 1px
+
+// Creates classes like .grid_2 for a 2-column-wide grid.
+@for $i from 1 to $column_count + 1
+  .grid_#{$i}
+    :width ($i * $column_width + ($i - 1) * $column_gutter) * 1px
+
+// Creates mixins like +grid(2) for a 2-column-wide grid.
+=grid($cols)
+  :width ($cols * $column_width + ($cols - 1) * $column_gutter) * 1px
+
+//Set the width of rows and center them on tha page.
+.row
+  :width $total_width
+  :margin 0 auto
+  :overflow hidden
+  .row
+    :margin 0 $column_gutter /2 * -1px
+    :width auto
+    :display inline-block
+
+
+//Set up the Column to clear:both (http://www.quirksmode.org/css/clearing.html), set a half margin on the left and right and fix the IE6 bug
+.column
+  :float left
+  :margin 0 $column_gutter /2 * 1px
+  :overflow hidden
+  :display inline
