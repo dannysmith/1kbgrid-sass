@@ -12,9 +12,11 @@ $total_width: $column_width * $column_count + $column_gutter * $column_count * 1
   .grid_#{$i}
     :width ($i * $column_width + ($i - 1) * $column_gutter) * 1px
 
-// Creates mixins like +grid(2) for a 2-column-wide grid.
-=grid($cols)
-  :width ($cols * $column_width + ($cols - 1) * $column_gutter) * 1px
+// Creates mixins like +grid(2, 2px) for a 2-column-wide grid that has a 1px border around the edge.
+// The columns arguments defaults to the maximum width.
+// The border argument defaults to zero.
+=grid($cols: $column_count, $border: 0px)
+  :width ($cols * $column_width + ($cols - 1) * $column_gutter) * 1px - $border
 
 //Set the width of rows and center them on tha page.
 .row
@@ -26,8 +28,6 @@ $total_width: $column_width * $column_count + $column_gutter * $column_count * 1
     :width auto
     :display inline-block
 
-
-//Set up the Column to clear:both (http://www.quirksmode.org/css/clearing.html), set a half margin on the left and right and fix the IE6 bug
 .column
   :float left
   :margin 0 $column_gutter /2 * 1px
