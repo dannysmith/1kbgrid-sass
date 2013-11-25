@@ -66,3 +66,7 @@ If you want to change the Haml or Sass you'll obviously have to re-render the HT
 ## Author
 1KbGrid-sass was written by [Danny Smith](http://dasmith.co.uk).<br>
 The 1Kb Grid was dreamed up by [Tyler Tate](http://www.tylertate.com/). See [http://www.1kbgrid.com/](http://www.1kbgrid.com/)
+
+
+[![Bitdeli Badge](https://d2weczhvl823v0.cloudfront.net/dannysmith/1kbgrid-sass/trend.png)](https://bitdeli.com/free "Bitdeli Badge")
+
